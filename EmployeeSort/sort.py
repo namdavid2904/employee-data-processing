@@ -9,7 +9,6 @@ class Employee:
         self.email = email
         self.years = years
 
-    #TODO1: make this class comparable.
     def  __eq__(self, other):
         return (self.last_name == other.last_name) and (self.first_name == other.first_name) and (self.email == other.email) and (int(self.years) == int(other.years))
 
@@ -32,7 +31,6 @@ class EmployeeDataProcessor:
     def __init__(self, data_list=None):
         self.data_list = []
 
-    #TODO2: implement this method.
     def get_data_list_from_csvfile(self, file_name):
         """This method opens the csv file passed in and 
             creates an Employee object for each row of data
@@ -51,7 +49,6 @@ class EmployeeDataProcessor:
     def get_data_size(self):
         return len(self.data_list)
 
-    #TODO3: implement this method.
     def get_employee_record(self, first_name, last_name, years):
         """Returns the first Employee object in the data_list that
            matches first_name, last_name, and years.
@@ -63,8 +60,6 @@ class EmployeeDataProcessor:
         return None
 
 
-
-    #TODO4: implement this method.
     def get_employee_list(self, start, end, sorted=False):
         """ Returns a list of employee object from data_list that fall
             within a specific range as specified by start and end index parameters.
@@ -91,8 +86,6 @@ class EmployeeDataProcessor:
                     return a
 
 
-
-    #TODO5: implement this method.
     def get_years_list(self):
         """Returns a list that contains only the years from 
             all records on the data_list."""
